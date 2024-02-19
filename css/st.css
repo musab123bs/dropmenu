@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+.mobile-header {
+    position: relative;
+    height: 100vh;
+}
+.mobile-header .nav-list {
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.mobile-header .nav-list.active {
+    left: 50%;
+}
+.mobile-header .nav-list > ul {
+    list-style: none;
+    padding: 0;
+}
+.mobile-header .nav-list > ul li {
+    margin: 0 40px 0px 0;
+}
+.mobile-header .logo-holder {
+    width: 100px;
+}
+.mobile-header .logo-holder img {
+    width: 100%;
+}
+.mobile-header .nav-list > ul > li {
+    margin-bottom: 1px;
+    position: relative;
+    margin-right: 0;
+    background-image: linear-gradient(45deg, #000000, #000000);
+    padding: 11px 0 11px;
+}
+.mobile-header .nav-list > ul a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 8px;
+}
+.mobile-header .nav-list ul {
+    list-style: none;
+    width: 286px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.mobile-header .nav-list > ul li:has(ul) ul {
+    height: 0px;
+    transition: 0.75s;
+    position: relative;
+    background-color: #fff;
+}
+.mobile-header .nav-list > ul li.active ul {
+    padding: 0;
+    height: auto;
+    margin-top: 15px;
+}
+.mobile-header .nav-list > ul li.active ul li {
+    margin: 0;
+    margin-bottom: 3px;
+    padding-bottom: 1px;
+    background-color: #000;
+}
+.mobile-header .nav-list > ul > li.active {
+    padding-bottom: 0;
+}
+.mobile-header .nav-list > ul li.active ul li a {
+  
+padding-left: 25px;
+}
+.mobile-header .nav-list > ul li:has(ul) i {padding-left: 5px;position: absolute;top: 19px;left: 92%;transform: translate(-50%, -50%);}
+.mobile-header .nav-list > ul li.active ul li:first-child {
+    margin-top: 3px;
+}
+.mobile-header .nav-list > ul li.active ul li:last-child {
+    margin-bottom: 0;
+}
+.mobile-header .nav-list > ul li.active ul li:nth-child(odd) {
+    background-color: #363636;
+}
+.mobile-header .nav-list > ul li.active ul li:nth-child(even) {
+    background-color: #2a2626a3;
+}
+.toggleBtn {
+    background-color: #ddd;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.toggleBtn span {
+    height: 2px;
+    width: 80%;
+    background-color: #000;
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
+    transition: 0.5s;
+}
+.toggleBtn span:nth-child(1){
+    top: 10px;
+}
+.toggleBtn span:nth-child(2){
+    top: 19px;
+}
+.toggleBtn span:nth-child(3){
+    bottom: 10px;
+}
+
+.toggleBtn span:nth-child(1).active{
+    top: 20px;
+    transform: rotate(45deg);
+}
+.toggleBtn span:nth-child(2).active{
+    top: 20px;
+    transform: rotate(313deg);
+}
+.toggleBtn span:nth-child(3).active{
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+
